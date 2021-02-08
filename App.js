@@ -7,35 +7,6 @@ import {
   Share,
   Platform,
 } from 'react-native'
-//import Share from 'react-native-share'
-
-// // export default class App extends Component {
-// //   constructor (props) {
-// //     super(props)
-// //     this.state = {}
-// //   }
-
-// //   myCustomeShare = async () => {
-// //     const shareOption = {
-// //       message: 'This is a test message',
-// //     }
-// //     try {
-// //       const ShareResponse = await Share.open(shareOption)
-// //     } catch (error) {
-// //       console.log('Error =>', error)
-// //     }
-// //   }
-
-// //   render () {
-// //     return (
-// //       <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-// //         <TouchableOpacity onPress={() => this.myCustomeShare()}>
-// //           <Text style={{fontSize: 30}}> App </Text>
-// //         </TouchableOpacity>
-// //       </View>
-// //     )
-// //   }
-// // }
 
 export default App = () => {
   const onShare = async () => {
@@ -77,12 +48,9 @@ export default App = () => {
       )
       if (result.action === Share.sharedAction) {
         if (result.activityType) {
-          // shared with activity type of result.activityType
         } else {
-          // shared
         }
       } else if (result.action === Share.dismissedAction) {
-        // dismissed
       }
     } catch (error) {
       alert(error.message)
@@ -216,3 +184,33 @@ export default App = () => {
 //     borderWidth: 0.5,
 //   },
 // })
+
+//import Share from 'react-native-share'
+
+// // export default class App extends Component {
+// //   constructor (props) {
+// //     super(props)
+// //     this.state = {}
+// //   }
+
+// //   myCustomeShare = async () => {
+// //     const shareOption = {
+// //       message: 'This is a test message',
+// //     }
+// //     try {
+// //       const ShareResponse = await Share.open(shareOption)
+// //     } catch (error) {
+// //       console.log('Error =>', error)
+// //     }
+// //   }
+
+// //   render () {
+// //     return (
+// //       <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+// //         <TouchableOpacity onPress={() => this.myCustomeShare()}>
+// //           <Text style={{fontSize: 30}}> App </Text>
+// //         </TouchableOpacity>
+// //       </View>
+// //     )
+// //   }
+// // }
